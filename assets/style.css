@@ -125,6 +125,12 @@ header {
 /* Gestion des fleches du carrousel */
 #banner .arrow {
 	position: absolute;
+	/* J'ai du ajouter ce bout de css en dessous */
+	width: 100px;
+	height: 100px;
+	object-fit: contain;
+	z-index: 4;
+	cursor: pointer;
 }
 #banner .arrow_left {
 	left: 10px;
@@ -139,6 +145,7 @@ header {
 	display: flex;
 }
 .dot {
+	cursor: pointer;
 	margin-inline: 5px;
 	width: 13px;
 	height: 13px;
