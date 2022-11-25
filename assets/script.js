@@ -16,10 +16,11 @@ const slides = [
 		"tagLine":"Autocollants <span>avec découpe laser sur mesure</span>"
 	}
 ]
-
+console.log(slides.length)
 const leftArrow = document.querySelector(".arrow_left");
 const rightArrow = document.querySelector('.arrow_right');
 const dots = document.getElementsByClassName("dot")
+console.log(dots)
 const slidNumber = slides.length;
 const banerImage = document.querySelector('.active_img');
 const banerParagraph = document.querySelector("#banner p");
@@ -27,7 +28,7 @@ console.log(banerParagraph)
 var sourceImage = "./assets/images/slideshow/";
 let count = 0;
 
-function img() {
+function imgParagraph() {
 	const image = slides[count].image;
 	// const image = `slide${count + 1}.jpg`
 	console.log(image)
@@ -46,7 +47,7 @@ function slideSuivant() {
 		count = 0;
 	}
 	dots[count].classList.add("dot_selected");
-	img()
+	imgParagraph()
 }
 
 function slidePrecedent() {
@@ -57,7 +58,7 @@ function slidePrecedent() {
 		count = slidNumber - 1;
 	}
 	dots[count].classList.add("dot_selected");
-	img()
+	imgParagraph()
 }
 
 leftArrow.addEventListener("click", slidePrecedent);
